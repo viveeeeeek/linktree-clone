@@ -23,7 +23,7 @@ class Lava extends StatelessWidget {
       theme: ThemeData(
         primaryColor: primaryColor,
       ),
-     home: HomeView(),
+      home: HomeView(),
     );
   }
 }
