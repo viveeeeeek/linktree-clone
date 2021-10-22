@@ -3,7 +3,7 @@ import 'package:linktree_clone/entities/user_data.entity.dart';
 
 class Services {
   static const String url =
-      'https://raw.githubusercontent.com/viveeeeeek/swadesh/master/user.data.json?token=APMQCH2VIKVZXTCLP7XDUXDBOKBPS';
+      'https://raw.githubusercontent.com/viveeeeeek/linktree-clone/master/assets/user.data.json';
 
   static Future<List<UserData>> getUserData() async {
     try {
