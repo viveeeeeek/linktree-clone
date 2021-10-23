@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:linktree_clone/constants/app.constants.dart';
 import 'package:linktree_clone/views/home.view.dart';
+
 
 void main() {
   runApp(Core());
@@ -19,9 +21,12 @@ class Lava extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'BMI Calculator',
+      title: 'Linktree Clone',
       theme: ThemeData(
         primaryColor: primaryColor,
+        textTheme: GoogleFonts.karlaTextTheme(
+          Theme.of(context).textTheme
+        )
       ),
       home: HomeView(),
     );
