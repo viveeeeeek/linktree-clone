@@ -1,10 +1,9 @@
 # Linktree Clone 🌲
 
-
+### Currenly only optimized for mobile
 ![image](https://user-images.githubusercontent.com/64553247/138511737-c81a8693-c7ef-4f73-8840-47000ef7e644.png)
 
 
-A new Flutter project.
 
 ## Getting Started
 
