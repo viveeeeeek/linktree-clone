@@ -6,21 +6,6 @@ Custom animated banner             |  Hover effect for web
 :-------------------------:|:-------------------------:
 ![image](https://user-images.githubusercontent.com/64553247/138548852-d529b99e-0d6d-410d-8858-c6a8711ba65e.png)   |  ![image](https://user-images.githubusercontent.com/64553247/138548975-e9d739b9-d726-44b4-a8ff-620923dd4100.png)
 
-<div class="row">
-  <div class="column">
-    
-![image](https://user-images.githubusercontent.com/64553247/138548852-d529b99e-0d6d-410d-8858-c6a8711ba65e.png) 
-  </div>
-  <div class="column">
-    
-![image](https://user-images.githubusercontent.com/64553247/138548852-d529b99e-0d6d-410d-8858-c6a8711ba65e.png) 
-  </div>
-  <div class="column">
-
-![image](https://user-images.githubusercontent.com/64553247/138548852-d529b99e-0d6d-410d-8858-c6a8711ba65e.png) 
-  </div>
-</div>
-
 ## Getting Started
 
 This project is a starting point for a Flutter application.
