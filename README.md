@@ -1,9 +1,25 @@
 # Linktree Clone 🌲
 
-### Currenly only optimized for mobile
-![image](https://user-images.githubusercontent.com/64553247/138511737-c81a8693-c7ef-4f73-8840-47000ef7e644.png)
+### Currenly only optimized for mobile only
 
+Custom animated banner             |  Hover effect for web
+:-------------------------:|:-------------------------:
+![image](https://user-images.githubusercontent.com/64553247/138548852-d529b99e-0d6d-410d-8858-c6a8711ba65e.png)   |  ![image](https://user-images.githubusercontent.com/64553247/138548975-e9d739b9-d726-44b4-a8ff-620923dd4100.png)
 
+<div class="row">
+  <div class="column">
+    
+![image](https://user-images.githubusercontent.com/64553247/138548852-d529b99e-0d6d-410d-8858-c6a8711ba65e.png) 
+  </div>
+  <div class="column">
+    
+![image](https://user-images.githubusercontent.com/64553247/138548852-d529b99e-0d6d-410d-8858-c6a8711ba65e.png) 
+  </div>
+  <div class="column">
+
+![image](https://user-images.githubusercontent.com/64553247/138548852-d529b99e-0d6d-410d-8858-c6a8711ba65e.png) 
+  </div>
+</div>
 
 ## Getting Started
 
