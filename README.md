@@ -1,6 +1,9 @@
 # Linktree Clone 🌲
 
-### Currenly only optimized for mobile only
+
+### Live demo :  https://v1v3k-linktree-clone.web.app
+
+ Currenly only optimized for mobile only
 
 Custom animated banner             |  Hover effect for web
 :-------------------------:|:-------------------------:
