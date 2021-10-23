@@ -1,10 +1,14 @@
 [
   {
-    "title": "Flutter BMI calculator",
+    "title": "BMI calculator",
     "link": "https://github.com/viveeeeeek/flutter-bmi-calculator/"
   },
   {
       "title": "1stHacktoberfest",
       "link": "https://github.com/viveeeeeek/1sthacktoberfest/"
+  },
+  {
+    "title": "Github",
+    "link": "https://github.com/viveeeeeek/"
   }
 ]    
