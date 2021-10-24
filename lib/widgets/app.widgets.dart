@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 // ignore: use_key_in_widget_constructors
 class CustomBottomSheet extends StatefulWidget {
@@ -28,7 +29,7 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                   children: [
                     const Expanded(child: SizedBox()),
                     const Text(
-                      "Support Anti-Racism",
+                      "Linktree clone",
                       style: TextStyle(color: Colors.white, fontSize: 16),
                     ),
                     const Expanded(child: SizedBox()),
@@ -56,7 +57,7 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
               )
             //! When bottomsheet is expanded
             : Padding(
-                padding: const EdgeInsets.fromLTRB(15, 15, 15, 15),
+                padding: const EdgeInsets.fromLTRB(15, 15, 15, 5),
                 child: SingleChildScrollView(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -66,7 +67,7 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                         children: [
                           const Expanded(child: SizedBox()),
                           const Text(
-                            "Support Anti-Racism",
+                            "Linktree clone",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 16,
@@ -97,33 +98,55 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                         ],
                       ),
                       const SizedBox(
-                        height: 5,
+                        height: 10,
                       ),
-                      const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 65),
-                        child: Text(
-                          "I'm raising awareness, driving donations and sharing information in support of justice and equality",
+                      SizedBox(
+                        width: screenSize.width > 1000
+                            ? screenSize.width / 2.3
+                            : screenSize.width > 768
+                                ? screenSize.width / 1.2
+                                : screenSize.width,
+                        child: const Text(
+                          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontSize: 16, color: Colors.white, height: 1.5),
                         ),
                       ),
                       const SizedBox(
-                        height: 20,
+                        height: 15,
                       ),
                       Container(
                         height: 50,
+                        width: screenSize.width > 768 //! is if Tab / Desktop
+                            ? screenSize.width / 2.3
+                            : screenSize.width / 1.5, //! is Mobile
                         decoration: const BoxDecoration(
                             color: Colors.white,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(15))),
-                        child: const Center(
-                          child: Text(
-                            "ACT NOW",
-                            style: TextStyle(
+                        child: TextButton(
+                          onPressed: () {
+                            launch(
+                                'https://github.com/viveeeeeek/linktree-clone');
+                          },
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Icon(
+                                Icons.code,
                                 color: Colors.black,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w700),
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Text(
+                                "Source code",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w700,
+                                    color: Colors.black),
+                              )
+                            ],
                           ),
                         ),
                       ),

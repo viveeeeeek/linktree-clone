@@ -28,35 +28,39 @@ class _HomeViewState extends State<HomeView> {
 
   @override
   Widget build(BuildContext context) {
+    final screenSize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
         children: [
-          Positioned(bottom: 0, child: CustomBottomSheet()),
-          Column(
-            children: [
-              const SizedBox(
-                height: 35,
-              ),
-              const CircleAvatar(
-                radius: 50,
-                backgroundImage: NetworkImage(
-                    'https://avatars.githubusercontent.com/u/64553247'),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              const Text(
-                "@viveeeeeek",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              Expanded(
-                child: SizedBox(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 25),
+          Padding(
+            padding: screenSize.width > 1000 //! if is Desktop
+                ? const EdgeInsets.symmetric(horizontal: 360)
+                : screenSize.width > 768 //! if is Tab
+                    ? const EdgeInsets.symmetric(horizontal: 150)
+                    : const EdgeInsets.symmetric(horizontal: 25), //! is mobile
+            child: Column(
+              children: [
+                const SizedBox(
+                  height: 35,
+                ),
+                const CircleAvatar(
+                  radius: 50,
+                  backgroundImage: NetworkImage(
+                      'https://avatars.githubusercontent.com/u/64553247'),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Text(
+                  "@viveeeeeek",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                Expanded(
+                  child: SizedBox(
                     child: ListView.builder(
                         itemCount: _userdata == null ? 0 : _userdata!.length,
                         itemBuilder: (BuildContext context, int index) {
@@ -65,6 +69,7 @@ class _HomeViewState extends State<HomeView> {
                               padding: const EdgeInsets.fromLTRB(0, 0, 0, 15),
                               child: Container(
                                 height: 50,
+                                width: screenSize.width / 3,
                                 decoration: BoxDecoration(
                                   color: const Color(0xFF39E09B),
                                   border: Border.all(
@@ -102,9 +107,13 @@ class _HomeViewState extends State<HomeView> {
                         }),
                   ),
                 ),
-              )
-            ],
+                const SizedBox(
+                  height: 75,
+                )
+              ],
+            ),
           ),
+          Positioned(bottom: 0, child: CustomBottomSheet()),
         ],
       ),
     );
