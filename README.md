@@ -1,4 +1,4 @@
-# Linktree Clone 🌲
+# Personal Linktree Clone 🌲
 
 
 ### Live demo :  https://v1v3k-linktree-clone.web.app
