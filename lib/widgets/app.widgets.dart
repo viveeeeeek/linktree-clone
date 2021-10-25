@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:linktree_clone/utils/constants.utils.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 // ignore: use_key_in_widget_constructors
@@ -8,7 +9,7 @@ class CustomBottomSheet extends StatefulWidget {
 }
 
 class _CustomBottomSheetState extends State<CustomBottomSheet> {
-  static double maxSize = 225;
+  static double maxSize = 200;
   static bool isExpanded = true;
 
   @override
@@ -40,7 +41,7 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                               maxSize = 60;
                               isExpanded = false;
                             } else {
-                              maxSize = 225;
+                              maxSize = 200;
                               isExpanded = true;
                             }
                           });
@@ -83,7 +84,7 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                                     maxSize = 60;
                                     isExpanded = false;
                                   } else {
-                                    maxSize = 225;
+                                    maxSize = 200;
                                     isExpanded = true;
                                   }
                                 });
@@ -107,7 +108,7 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                                 ? screenSize.width / 1.2
                                 : screenSize.width,
                         child: const Text(
-                          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+                          "Personal linktree clone using flutter.",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontSize: 16, color: Colors.white, height: 1.5),
@@ -128,7 +129,7 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                         child: TextButton(
                           onPressed: () {
                             launch(
-                                'https://github.com/viveeeeeek/linktree-clone');
+                                REPO_SOURCE_CODE);
                           },
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,

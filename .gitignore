@@ -25,7 +25,6 @@
 **/ios/Flutter/.last_build_id
 .dart_tool/
 .firebase/
-.firebasearc
 .flutter-plugins
 .flutter-plugins-dependencies
 .packages

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:linktree_clone/entities/user_data.entity.dart';
+import 'package:linktree_clone/models/linktree_data.model.dart';
 import 'package:linktree_clone/services/fetch_user_data.service.dart';
+import 'package:linktree_clone/utils/constants.utils.dart';
 import 'package:linktree_clone/widgets/app.widgets.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -10,13 +11,13 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  List<UserData>? _userdata;
+  List<LinktreeData>? _linktreedata;
   @override
   void initState() {
     try {
-      Services.getUserData().then((userdata) {
+      Services.getLinkTreeData().then((linktreedata) {
         setState(() {
-          _userdata = userdata;
+          _linktreedata = linktreedata;
           print("fetching user data properly");
         });
       });
@@ -47,7 +48,7 @@ class _HomeViewState extends State<HomeView> {
                 const CircleAvatar(
                   radius: 50,
                   backgroundImage: NetworkImage(
-                      'https://avatars.githubusercontent.com/u/64553247'),
+                      PROFILE_AVTAR),
                 ),
                 const SizedBox(
                   height: 20,
@@ -62,9 +63,9 @@ class _HomeViewState extends State<HomeView> {
                 Expanded(
                   child: SizedBox(
                     child: ListView.builder(
-                        itemCount: _userdata == null ? 0 : _userdata!.length,
+                        itemCount: _linktreedata == null ? 0 : _linktreedata!.length,
                         itemBuilder: (BuildContext context, int index) {
-                          UserData userData = _userdata![index];
+                          LinktreeData userData = _linktreedata![index];
                           return Padding(
                               padding: const EdgeInsets.fromLTRB(0, 0, 0, 15),
                               child: Container(

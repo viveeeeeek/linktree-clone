@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:linktree_clone/constants/app.constants.dart';
+import 'package:linktree_clone/utils/constants.utils.dart';
 import 'package:linktree_clone/views/home.view.dart';
 import 'package:linktree_clone/views/splash.view.dart';
 

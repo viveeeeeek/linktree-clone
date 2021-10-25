@@ -1,23 +1,23 @@
 import 'package:http/http.dart' as http;
-import 'package:linktree_clone/entities/user_data.entity.dart';
+import 'package:linktree_clone/models/linktree_data.model.dart';
+import 'package:linktree_clone/utils/constants.utils.dart';
 
 class Services {
-  static const String url =
-      'https://raw.githubusercontent.com/viveeeeeek/linktree-clone/master/assets/user.data.json';
 
-  static Future<List<UserData>> getUserData() async {
+  static Future<List<LinktreeData>> getLinkTreeData() async {
     try {
-      final response = await http.get(Uri.parse(url));
+      final response = await http.get(Uri.parse(LINKTREE_DATA_URL));
       if (200 == response.statusCode) {
-        final List<UserData> usersData = userdataFromJson(response.body);
-        return usersData;
+        final List<LinktreeData> linktreeData = linktreedataFromJson(response.body);
+        return linktreeData;
       } else {
         print("something went wrong");
-        return List<UserData>.empty();
+        return List<LinktreeData>.empty();
       }
     } catch (e) {
       print(e);
-      return List<UserData>.empty();
+      return List<LinktreeData>.empty();
     }
   }
 }
+
