@@ -25,3 +25,6 @@ flutter run -d chrome --web-renderer html // to run the app
 flutter build web --web-renderer html --release // to generate a production build</pre>
 </div>
 
+### LICENSE
+
+Licensed under the [MIT License](LICENSE).
