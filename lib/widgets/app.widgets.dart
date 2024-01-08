@@ -15,9 +15,9 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
-    return AnimatedContainer(
-        duration: const Duration(milliseconds: 500),
-        curve: Curves.easeIn,
+    return Container(
+        // duration: const Duration(milliseconds: 500),
+        // curve: Curves.easeIn,
         height: maxSize,
         width: screenSize.width,
         color: Colors.black,
@@ -128,12 +128,11 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                                 BorderRadius.all(Radius.circular(15))),
                         child: TextButton(
                           onPressed: () {
-                            launch(
-                                REPO_SOURCE_CODE);
+                            launchUrl(Uri.parse(repoSourceCodeUrl));
                           },
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
+                            children: [
                               Icon(
                                 Icons.code,
                                 color: Colors.black,

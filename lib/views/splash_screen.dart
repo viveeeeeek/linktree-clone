@@ -1,9 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:linktree_clone/views/home.view.dart';
+import 'package:linktree_clone/views/home_screen.dart';
 
 class SplashView extends StatefulWidget {
+  const SplashView({Key? key}) : super(key: key);
+
   @override
   State<SplashView> createState() => _SplashViewState();
 }
@@ -11,7 +13,7 @@ class SplashView extends StatefulWidget {
 class _SplashViewState extends State<SplashView> {
   _redirectHomescreen() {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => HomeView()));
+        context, MaterialPageRoute(builder: (context) => const HomeView()));
   }
 
   @override
@@ -22,7 +24,7 @@ class _SplashViewState extends State<SplashView> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

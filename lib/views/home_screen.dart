@@ -1,11 +1,15 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
-import 'package:linktree_clone/models/linktree_data.model.dart';
-import 'package:linktree_clone/services/fetch_user_data.service.dart';
+import 'package:linktree_clone/models/linktree_data.dart';
+import 'package:linktree_clone/services/fetch_user_data.dart';
 import 'package:linktree_clone/utils/constants.utils.dart';
 import 'package:linktree_clone/widgets/app.widgets.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomeView extends StatefulWidget {
+  const HomeView({Key? key}) : super(key: key);
+
   @override
   State<HomeView> createState() => _HomeViewState();
 }
@@ -47,8 +51,7 @@ class _HomeViewState extends State<HomeView> {
                 ),
                 const CircleAvatar(
                   radius: 50,
-                  backgroundImage: NetworkImage(
-                      PROFILE_AVTAR),
+                  backgroundImage: NetworkImage(profileImageUrl),
                 ),
                 const SizedBox(
                   height: 20,
@@ -63,7 +66,8 @@ class _HomeViewState extends State<HomeView> {
                 Expanded(
                   child: SizedBox(
                     child: ListView.builder(
-                        itemCount: _linktreedata == null ? 0 : _linktreedata!.length,
+                        itemCount:
+                            _linktreedata == null ? 0 : _linktreedata!.length,
                         itemBuilder: (BuildContext context, int index) {
                           LinktreeData userData = _linktreedata![index];
                           return Padding(
@@ -80,7 +84,7 @@ class _HomeViewState extends State<HomeView> {
                                 ),
                                 child: TextButton(
                                     onPressed: () {
-                                      launch(userData.link);
+                                      launchUrl(Uri.parse(userData.link));
                                     },
                                     style: ButtonStyle(
                                       overlayColor: MaterialStateProperty.all(

@@ -1,12 +1,12 @@
-import 'package:linktree_clone/views/home.view.dart';
-import 'package:linktree_clone/views/splash.view.dart';
+import 'package:linktree_clone/views/home_screen.dart';
+import 'package:linktree_clone/views/splash_screen.dart';
 
 class AppRoutes {
-  static const String HomeRoute = '/home';
-  static const String SplashRoute = '/splash';
+  static const String homeRoute = '/home';
+  static const String splashRoute = '/splash';
 
   static final routes = {
-    HomeRoute: (context) => HomeView(),
-    SplashRoute: (context) => SplashView(),
+    homeRoute: (context) => const HomeView(),
+    splashRoute: (context) => const SplashView(),
   };
 }
